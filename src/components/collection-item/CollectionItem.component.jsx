@@ -9,7 +9,7 @@ const CollectionItem = ({ item, addItem }) => {
     const { name, price, imageUrl } = item;
 
     return (
-    <div class="collection-item">
+    <div className="collection-item">
         <div
             className="image"
             style={{
