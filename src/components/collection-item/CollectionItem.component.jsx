@@ -1,8 +1,14 @@
 import React from 'react';
-import './collection-item.styles.scss';
 import CustomButton from '../custom-button//CustomButton.component';
 import { connect } from 'react-redux';
 import { addItem } from '../../redux/cart/cart.actions';
+
+import './collection-item.styles.scss';
+import styled from 'styled-components';
+
+const Price = styled.span`
+    width: 10%;
+`;
 
 const CollectionItem = ({ item, addItem }) => {
     
@@ -18,7 +24,8 @@ const CollectionItem = ({ item, addItem }) => {
         />
         <div className="collection-footer">
             <span className='name'>{name}</span>
-            <span className='price'>{price}</span>
+            {/* <span className='price'>{price}</span> */}
+            <Price>{price}</Price>
         </div>
         <CustomButton onClick={() => addItem(item)} inverted>Add to Cart</CustomButton>
     </div>
